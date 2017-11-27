@@ -35,7 +35,7 @@ class Song
     returnArr = []
     @@artists.each do |artist|
       returnArr << artist if !returnArr.include?(artist)
-    end    
+    end
     returnArr
   end
 
