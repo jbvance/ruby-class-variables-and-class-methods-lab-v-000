@@ -35,7 +35,7 @@ class Song
     returnArr = []
     @@artists.each do |artist|
       returnArr << artist if !returnArr.include?(artist)
-    end
+    end    
     returnArr
   end
 
@@ -48,8 +48,12 @@ class Song
   end
 
   def self.artist_count
+    count_entity(@@artists)
+  end
+
+  def self.count_entity(h)
     hash = {}
-    @@artists.each do |artist|
+    h.each do |artist|
       hash.has_key?(artist) ? hash[artist] += 1 : hash[artist] = 1
     end
     hash
