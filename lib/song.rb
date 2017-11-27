@@ -24,7 +24,7 @@ class Song
   def self.genres
     returnArr = []
     @@genres.each do |genre|
-      returnArr >> genre if !@@genres.include?(genre)
+      returnArr << genre if !@@genres.include?(genre)
     end
     returnArr
   end
@@ -32,7 +32,7 @@ class Song
   def self.artists
     returnArr = []
     @@artists.each do |artist|
-      returnArr >> artist if !@@artists.include?(artist)
+      returnArr << artist if !@@artists.include?(artist)
     end
     returnArr
   end
