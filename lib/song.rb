@@ -53,8 +53,8 @@ class Song
 
   def self.count_entity(h)
     hash = {}
-    h.each do |artist|
-      hash.has_key?(artist) ? hash[artist] += 1 : hash[artist] = 1
+    h.each do |entity|
+      hash.has_key?(entity) ? hash[entity] += 1 : hash[entity] = 1
     end
     hash
   end
