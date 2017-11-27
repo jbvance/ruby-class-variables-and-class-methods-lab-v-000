@@ -40,4 +40,12 @@ class Song
     returnArr
   end
 
+  def self.genre_count
+    hash = {}
+    @@genres.each do |genre|
+      hash.has_key?(genre) ? hash[genre] += 1 : hash[genre] = 1
+    end
+    hash
+  end
+
 end
