@@ -17,11 +17,11 @@ class Song
     @@count += 1
   end
 
-  def count
+  def self.count
     @@count
   end
 
-  def genres
+  def self.genres
     returnArr = []
     @@genres.each do |genre|
       returnArr >> genre if !@@genres.include?(genre)
@@ -29,7 +29,7 @@ class Song
     returnArr
   end
 
-  def artists
+  def self.artists
     returnArr = []
     @@artists.each do |artist|
       returnArr >> artist if !@@artists.include?(artist)
