@@ -35,8 +35,7 @@ class Song
     returnArr = []
     @@artists.each do |artist|
       returnArr << artist if !returnArr.include?(artist)
-    end
-    binding.pry
+    end    
     returnArr
   end
 
@@ -44,6 +43,14 @@ class Song
     hash = {}
     @@genres.each do |genre|
       hash.has_key?(genre) ? hash[genre] += 1 : hash[genre] = 1
+    end
+    hash
+  end
+
+  def self.artist_count
+    hash = {}
+    @@artists.each do |artist|
+      hash.has_key?(artist) ? hash[artist] += 1 : hash[artist] = 1
     end
     hash
   end
