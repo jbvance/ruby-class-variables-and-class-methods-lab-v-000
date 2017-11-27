@@ -1,3 +1,5 @@
+require 'pry'
+
 class Song
 
   attr_accessor :name, :artist, :genre
@@ -34,6 +36,7 @@ class Song
     @@artists.each do |artist|
       returnArr << artist if !@@artists.include?(artist)
     end
+    binding.pry
     returnArr
   end
 
